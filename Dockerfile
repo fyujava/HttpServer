@@ -39,6 +39,6 @@ RUN git clone https://github.com/qinyuanpei/HttpServer.git
 RUN cd ./HttpServer/
 #RUN sudo ${SONAR_SCANNER} -D sonar.host.url="https://sonarcloud.io" -D sonar.login="db795a28468dc7c12805b330afed53d362fdd2d9" -D sonar.projectKey="Sonar-HttpServer" -D sonar.sources="." -D sonar.projectName="HttpServer" -X
 #RUN msbuild /p:Configuration=Release ./HTTPServer/HTTPServer.sln
-RUN msbuild /p:Configuration=Release HTTPServer.sln
+RUN msbuild /t:Build /p:Configuration=Release ./HTTPServer/HTTPServer.sln
 #RUN mono ${NUNIT} ./HTTPServer/HTTPServerLib.UnitTest/bin/Release/HttpServerLib.UnitTest.dll
 EXPOSE 2048
