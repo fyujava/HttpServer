@@ -22,18 +22,18 @@ install:
 script:
   - msbuild /p:Configuration=Release HTTPServer.sln
 #  - mono ./TestRunner/NUnit.ConsoleRunner.3.8.0/tools/nunit3-console.exe ./HTTPServerLib.UnitTest/bin/Release/HttpServerLib.UnitTest.dll
-  - sonar-scanner -Dsonar.verbose=true -X
+ # - sonar-scanner -Dsonar.verbose=true -X
 
 branches:
   only:
     - master
 
-addons:
-  sonarcloud:
-    organization: "qinyuanpei-github" 
-    token: db795a28468dc7c12805b330afed53d362fdd2d9
+#addons:
+#  sonarcloud:
+ #   organization: "qinyuanpei-github" 
+ #   token: db795a28468dc7c12805b330afed53d362fdd2d9
     
-cache:
-  directories:
-    - '$HOME/.sonar/cache'
+#cache:
+ # directories:
+ #   - '$HOME/.sonar/cache'
 
